@@ -13159,7 +13159,7 @@ Percentage of human faces detected in dog files:  11.0
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Question 2:</strong> This algorithmic choice necessitates that we communicate to the user that we accept human images only when they provide a clear view of a face (otherwise, we risk having unneccessarily frustrated users!). In your opinion, is this a reasonable expectation to pose on the user? If not, can you think of a way to detect humans in images that does not necessitate an image with a clearly presented face?</p>
-<p><strong>Answer:</strong></p>
+<p><strong>Answer:</strong> Today, almost any application that requires photograph from the user provides guidelines related to the dimensions and clarity of the picture. I think we should also provide these guideline to our user. At the same time we have to do our best to train our model to recognize the facial features in the low pixel dense pictures. Our model must be able to pick the unique features of the face. When training our model, we have to provide the augmented facial images and also images with bad lightings and weird looking. This way we can do our best to identify the facial features. And also we can use low pixel image enchancer while uploading a picture but it's subjective.</p>
 <p>We suggest the face detector from OpenCV as a potential way to detect human images in your algorithm, but you are free to explore other approaches, especially approaches that make use of deep learning :).  Please use the code cell below to design and test your own face detection algorithm.  If you decide to pursue this <em>optional</em> task, report performance on each of the datasets.</p>
 
 </div>
@@ -13322,7 +13322,7 @@ $$<p>Here, <code>nb_samples</code> is the number of samples, or number of images
 <li>What percentage of the images in <code>human_files_short</code> have a detected dog?  </li>
 <li>What percentage of the images in <code>dog_files_short</code> have a detected dog?</li>
 </ul>
-<p><strong>Answer:</strong></p>
+<p><strong>Answer:</strong> The dog detecter using ResNet50 model has done pretty well in recognizing the dog faces in dog files.</p>
 
 </div>
 </div>
